@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Website </title>
+</head>
+
+<body>
+    <h1>This is heading </h1>
+
+
+    <div>
+        <ul>
+            <% if(locals.titleArray) { %>
+                        <% titleArray.forEach((title)=>{ %>
+
+                    <li> <a href="/blog">  <%= title%></a></li>
+                  
+
+                        <% }) %> 
+                        
+                        <% } else{%>
+                          <h1>  write something </h1>
+                        <% } %>
+         
+        </ul>
+
+    </div>
+
+
+    <a href="/submit"> New Blog </a>
+</body>
+
+</html>
