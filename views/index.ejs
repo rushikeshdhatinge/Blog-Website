@@ -13,16 +13,23 @@
 
     <div>
         <ul>
-            <% if(locals.titleArray) { %>
-                        <% titleArray.forEach((title)=>{ %>
+            <% if(locals.blogs) { %>
+                        <% blogs.forEach((blog)=>{ %>
 
-                    <li> <a href="/blog">  <%= title%></a></li>
+                 <li>
+      <a href="/blog/<%= blog.id %>">
+        <%= blog.title %>
+      </a>
+
                   
 
                         <% }) %> 
                         
                         <% } else{%>
                           <h1>  write something </h1>
+
+
+
                         <% } %>
          
         </ul>
@@ -30,7 +37,10 @@
     </div>
 
 
-    <a href="/submit"> New Blog </a>
+    <!-- <a href="/submit"> New Blog </a>  -->
+   <button onclick="window.location.href='/newBlog'">
+Create New Blog
+</button>
 </body>
 
 </html>
